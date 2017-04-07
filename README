@@ -1,0 +1,103 @@
+*******************************
+Abusive Permissions Application
+*******************************
+Author: Ryan Lafferty
+Target Platform: Android 6.0
+Minimum Platform: Android 4.3
+
+********
+Building
+********
+To build the following application you will have to import the 
+AbusivePermissions directory as an existing project from within
+the android studio application.
+(Use File -> Open to open an existing project)
+
+You will also need either an android device with USB debugging enabled
+or an android virtual device setup with android 6.0 installed.
+(This is where the built application will run)
+
+Dependancies:
+-------------
+Android Studio with default setup,
+Andriod 6.0 SDK, Android NDK Tools
+
+*******
+Running
+*******
+There are two ways you can run the application.
+
+1) Import the AbusivePermissions directory as specified
+above and attach a debugger such as an android virtual device 
+or and android device with USB debugging enabled.
+
+2) Install the application using the included app-debug.apk file,
+this will require you to have a supported android device that allows
+installtions from other sources.
+
+*****
+Usage
+*****
+File Permissions:
+-----------------
+1) Use the create secret file button to create the secretFile.txt file.
+2) Write any output that you would like to save in the text window.
+3) Click the save button to save the contents of the text window
+to the secreteFile.txt.
+4) Click the copy file button to copy the file from the external directory
+to the application's local directory (it's best to read the output statement
+in the debuger to locate the local directory).
+
+NDK Shell
+---------
+1) Enter any input into the text field located above the button group.
+2) Click the Java Shell button to execute the input in a java shell.
+3) Click the JNI Shell button to execute the input using the NDK through
+JNI, using a C Shell, this can bypass certain android security measures.
+
+
+Tips:
+-----
+Enter "toybox help -a" to list the commands avaliable to the toybox
+Enter "ls /system/bin" to list the system utilities in the bin directory
+Enter "ls /system/xbin" to list the system utilities in the xbin directory
+
+With the previous 3 commands you can list all of the system commands that you could potentially
+have access to with maximum priviledges. 
+
+Since google provides no documentation on these commands due to security purposes,
+to figure out what commands you can utilize and how to utilize them; you will
+have to experiment and poke around the android system.
+
+Fortunately I did some research and pasted below will be a list of commands that are
+avaliable in the android virtual device I had setup.
+
+A full list of system utilities in the bin directory can be seen in the commands.txt file
+
+More information about our research will be present in the paper that is submitted alongside
+our demo.
+
+Commands:
+---------
+ /*commands that work
+    * netstat - show connections & streams
+    * cal - output calendar
+    * ps - show processes
+    * vmstat - show jvm statistics
+    * sleep - will sleep the phone
+    * service list - list running services
+    * rm - remove file
+    * rmdir - remove directory
+    * cp - copy file
+    * mv - move file
+    * cat - output contents of a file
+    * touch - create file
+    * monkey - create file (on some devices)
+    * toybox - has a bunch of packaged system utilities
+    * toybox help -a -> dump command list with usages
+    * toybox nc -> netcat, can forge headers and create http requets with a lot of fiddling
+    *              (probably better to just prompt the user for internet permission, they'll click yes anyways)
+* */
+
+
+

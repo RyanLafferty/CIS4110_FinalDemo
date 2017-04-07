@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="36dp"
+        android:id="@+id/shell_input"
+        />
+
+    <Button
+        android:id="@+id/execute_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shell_input"
+        android:layout_alignStart="@+id/shell_input"
+        android:layout_below="@+id/shell_input"
+        android:layout_marginTop="19dp"
+        android:text="Java Shell"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/execute_button"
+        android:layout_alignStart="@+id/execute_button"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/shell_output"
+        android:maxLines = "15"
+        android:scrollbars = "vertical"
+        />
+
+    <Button
+        android:id="@+id/jni_create_file"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/execute_button"
+        android:layout_alignRight="@+id/execute_button"
+        android:layout_below="@+id/execute_button"
+        android:layout_marginTop="16dp"
+        android:text="jni monkey"/>
+
+    <Button
+        android:id="@+id/jni_rm"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/jni_create_file"
+        android:layout_alignBottom="@+id/jni_create_file"
+        android:layout_toEndOf="@+id/jni_create_file"
+        android:layout_toRightOf="@+id/jni_create_file"
+        android:text="jni rm"/>
+
+    <Button
+        android:id="@+id/jni_ls"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/execute_button"
+        android:layout_alignBottom="@+id/execute_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_toEndOf="@+id/shell_input"
+        android:layout_toRightOf="@+id/shell_input"
+        android:text="jni shell"/>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:text="List External Root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/writeable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/list_root"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/file_output"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:text="writeable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/writeable"
+        android:layout_below="@+id/readable"
+        android:layout_alignLeft="@+id/readable"
+        android:layout_alignStart="@+id/readable"/>
+
+    <TextView
+        android:id="@+id/readable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="readable"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/create_file"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/list_root"
+        android:layout_alignBottom="@+id/list_root"
+        android:layout_toRightOf="@+id/list_root"
+        android:text="Create Secret File"/>
+
+    <Button
+        android:id="@+id/copy_file"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copy File"
+        android:layout_below="@+id/list_root"
+        android:layout_alignLeft="@+id/writeable"
+        android:layout_alignStart="@+id/writeable"
+        android:layout_toLeftOf="@+id/create_file"
+        android:layout_toStartOf="@+id/create_file"/>
+
+    <EditText
+        android:id="@+id/edit_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/copy_file"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/copy_file"
+        android:layout_below="@+id/copy_file"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/save_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/create_file"
+        android:layout_alignRight="@+id/create_file"
+        android:layout_below="@+id/create_file"
+        android:layout_toRightOf="@+id/copy_file"
+        android:text="Save"/>
+
+</RelativeLayout>
